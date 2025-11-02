@@ -3,9 +3,9 @@ package com.example.OrderServec.models;
 import java.util.List;
 
 public class Order {
-    private Long id;
-    private Long userId;
-    private Double totalAmount;
+    private long id;
+    private long userId;
+    private double totalAmount;
     private String currency;
     private List<Product> products;
 
@@ -13,29 +13,37 @@ public class Order {
 
     }
 
-    public Order(Long id, Long userId, Double totalAmount, String currency,List<Product> items){
+    public Order(long id, long userId, String currency,List<Product> items){
         this.id = id;
         this.userId = userId;
-        this.totalAmount = totalAmount;
         this.currency = currency;
         this.products = items;
     }
 
-    public Long getId(){
+    public long getId(){
         return id;
     }
-    public void setId(Long id){
+    public void setId(long id){
         this.id = id;
     }
-    public Long getUserId(){
+    public long getUserId(){
         return userId;
     }
-    public Double getTotalAmount(){
-        return totalAmount;
+
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
-    public void setTotalAmount(Double totalAmount){
-        this.totalAmount = totalAmount;
+
+    public double getTotalAmount(){
+        if(products == null || products.isEmpty()){
+            return 0;
+        }
+        var result = products.stream()
+                .mapToDouble(x -> x.getPrice() * x.getQuantity())
+                .sum();
+        return result;
     }
+
     public String getCurrency(){
         return currency;
     }

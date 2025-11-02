@@ -2,14 +2,14 @@ package com.example.OrderServec.models;
 
 public class Product {
     private String productName;
-    private Integer quantity;
-    private Double price;
+    private int quantity;
+    private double price;
 
     public Product(){
 
     }
 
-    public Product(String productName, Integer quantity, Double price){
+    public Product(String productName, int quantity, double price){
         this.productName = productName;
         this.quantity = quantity;
         this.price = price;
@@ -23,19 +23,19 @@ public class Product {
         this.productName = productName;
     }
 
-    public Integer getQuantity(){
+    public int getQuantity(){
         return  quantity;
     }
 
-    public  void setQuantity(Integer quantity){
+    public  void setQuantity(int quantity){
         this.quantity = quantity;
     }
 
-    public  Double getPrice(){
+    public  double getPrice(){
         return price;
     }
 
-    public void setPrice(Double price){
+    public void setPrice(double price){
         this.price = price;
     }
 
