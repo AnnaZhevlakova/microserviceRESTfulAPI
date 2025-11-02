@@ -9,24 +9,26 @@ public class Order {
     private String currency;
     private List<Product> products;
 
-    public Order(){
+    public Order() {
 
     }
 
-    public Order(long id, long userId, String currency,List<Product> items){
+    public Order(long id, long userId, String currency, List<Product> items) {
         this.id = id;
         this.userId = userId;
         this.currency = currency;
         this.products = items;
     }
 
-    public long getId(){
+    public long getId() {
         return id;
     }
-    public void setId(long id){
+
+    public void setId(long id) {
         this.id = id;
     }
-    public long getUserId(){
+
+    public long getUserId() {
         return userId;
     }
 
@@ -34,8 +36,8 @@ public class Order {
         this.userId = userId;
     }
 
-    public double getTotalAmount(){
-        if(products == null || products.isEmpty()){
+    public double getTotalAmount() {
+        if (products == null || products.isEmpty()) {
             return 0;
         }
         var result = products.stream()
@@ -44,19 +46,21 @@ public class Order {
         return result;
     }
 
-    public String getCurrency(){
+    public String getCurrency() {
         return currency;
     }
-    public void setCurrency(String currency){
+
+    public void setCurrency(String currency) {
         this.currency = currency;
     }
-    public List<Product> getProducts(){
+
+    public List<Product> getProducts() {
         return products;
     }
-    public void setProducts(List<Product> products){
+
+    public void setProducts(List<Product> products) {
         this.products = products;
     }
-
 
 
 }

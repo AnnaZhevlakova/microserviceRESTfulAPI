@@ -6,16 +6,16 @@ public class UserResponse {
     private User user;
     private List<Order> orders;
 
-    public UserResponse(){
+    public UserResponse() {
 
     }
 
-    public UserResponse(User user, List<Order> orders){
+    public UserResponse(User user, List<Order> orders) {
         this.user = user;
         this.orders = orders;
     }
 
-    public User getUser(){
+    public User getUser() {
         return user;
     }
 
