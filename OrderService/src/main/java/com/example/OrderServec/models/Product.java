@@ -1,15 +1,15 @@
 package com.example.OrderServec.models;
 
-public class OrderItem {
+public class Product {
     private String productName;
     private Integer quantity;
     private Double price;
 
-    public OrderItem(){
+    public Product(){
 
     }
 
-    public OrderItem(String productName,Integer quantity,Double price){
+    public Product(String productName, Integer quantity, Double price){
         this.productName = productName;
         this.quantity = quantity;
         this.price = price;

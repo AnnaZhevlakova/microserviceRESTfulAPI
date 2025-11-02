@@ -7,18 +7,18 @@ public class Order {
     private Long userId;
     private Double totalAmount;
     private String currency;
-    private List<OrderItem> items;
+    private List<Product> products;
 
     public Order(){
 
     }
 
-    public Order(Long id, Long userId, Double totalAmount, String currency,List<OrderItem> items){
+    public Order(Long id, Long userId, Double totalAmount, String currency,List<Product> items){
         this.id = id;
         this.userId = userId;
         this.totalAmount = totalAmount;
         this.currency = currency;
-        this.items = items;
+        this.products = items;
     }
 
     public Long getId(){
@@ -42,11 +42,11 @@ public class Order {
     public void setCurrency(String currency){
         this.currency = currency;
     }
-    public List<OrderItem> getItems(){
-        return items;
+    public List<Product> getProducts(){
+        return products;
     }
-    public void  setItems(List<OrderItem> items){
-        this.items = items;
+    public void setProducts(List<Product> products){
+        this.products = products;
     }
 
 
