@@ -1,4 +1,4 @@
-package com.example.OrderServec.models;
+package com.example.BFFService.models;
 
 public class Product {
     private String productName;
