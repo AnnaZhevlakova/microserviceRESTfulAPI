@@ -1,7 +1,7 @@
 package com.example.UserService.models;
 
 public class User {
- private long Id;
+ private long id;
  private String fullName;
  private  String deliveryAddress;
  private String phoneNumber;
@@ -10,7 +10,7 @@ public class User {
   public  User(){};
 
   public User(Long id,String fullName, String deliveryAddress,String phoneNumber, String email){
-      this.Id = id;
+      this.id = id;
       this.fullName = fullName;
       this.deliveryAddress = deliveryAddress;
       this.phoneNumber = phoneNumber;
@@ -18,11 +18,11 @@ public class User {
   }
 
     public long getId() {
-        return Id;
+        return id;
   }
 
     public void setId(long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getFullName(){
