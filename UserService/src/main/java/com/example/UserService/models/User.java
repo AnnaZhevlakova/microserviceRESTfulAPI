@@ -10,8 +10,6 @@ public class User {
     public User() {
     }
 
-    ;
-
     public User(long id, String fullName, String deliveryAddress, String phoneNumber, String email) {
         this.id = id;
         this.fullName = fullName;

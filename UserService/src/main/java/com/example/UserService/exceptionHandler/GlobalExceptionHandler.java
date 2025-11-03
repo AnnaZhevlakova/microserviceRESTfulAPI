@@ -1,6 +1,5 @@
 package com.example.UserService.exceptionHandler;
 
-
 import com.example.UserService.StackTraceUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
