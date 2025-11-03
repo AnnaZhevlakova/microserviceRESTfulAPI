@@ -22,6 +22,9 @@ public class UserController {
     @GetMapping("/{userId}")
     public ResponseEntity<?> getUser(@PathVariable Long userId) {
         var result = userService.getUser(userId);
+        if (result == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 

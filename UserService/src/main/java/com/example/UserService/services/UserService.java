@@ -1,5 +1,6 @@
 package com.example.UserService.services;
 
+import com.example.UserService.Data;
 import com.example.UserService.models.User;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -8,7 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
     public User getUser(long userId) {
-        return new User(1, "test", "test", "test", "test");
+        var result = Data.getTestUser().stream().filter(x -> x.getId() == userId)
+                .findFirst()
+                .orElseGet(() -> null);
+        return result;
     }
 
 
